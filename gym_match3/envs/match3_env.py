@@ -122,3 +122,6 @@ class Match3Env(gym.Env):
         if close:
             warnings.warn("close=True isn't supported yet")
         self.renderer.render_board(self.__game.board)
+
+    def get_available_actions(self):
+        return self.__match3_actions
